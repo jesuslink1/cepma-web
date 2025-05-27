@@ -9,8 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.6",
-    "astro": "^5.7.12",
-    "tailwindcss": "^4.1.6"
+    "@tailwindcss/vite": "^4.1.7",
+    "cepma-web": "file:",
+    "tailwindcss": "^4.1.7"
+  },
+  "devDependencies": {
+    "astro": "^5.8.0"
   }
 }
