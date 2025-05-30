@@ -1,0 +1,78 @@
+---
+const eventos = [
+  "/images/evento1.jpg",
+  "/images/evento2.jpg",
+  "/images/evento3.jpg",
+  "/images/evento4.jpg",
+];
+---
+
+<div class="max-w-6xl mx-auto px-4 pt-10 pb-15">
+  <!-- Título -->
+  <h2
+    class="titulo-subrayado mb-32 text-center text-3xl font-bold text-[#2c9b9b]"
+  >
+    Nuestros eventos más recientes
+  </h2>
+
+  <!-- Carrusel estático -->
+  <div class="relative">
+    <div class="flex items-center justify-between gap-6">
+      <!-- Flecha Izquierda -->
+      <button
+        class="transform hover:scale-110 transition-transform duration-300 text-[#2c9b9b]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-35 h-35"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+        </svg>
+      </button>
+
+      <!-- Imágenes -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center mt-12"
+      >
+        {
+          eventos.map((src, index) => (
+            <img
+              src={src}
+              alt={`Evento ${index + 1}`}
+              class="w-48 h-48 object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
+            />
+          ))
+        }
+      </div>
+
+      <!-- Flecha Derecha -->
+      <button
+        class="transform hover:scale-110 transition-transform duration-300 text-[#2c9b9b]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-35 h-35"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Indicadores -->
+    <div class="flex justify-center mt-6 space-x-2">
+      {
+        [...Array(6)].map((_, i) => (
+          <span
+            class={`w-3 h-3 rounded-full ${
+              i === 0 ? "bg-[#2c9b9b]" : "bg-[#c4e7e7]"
+            }`}
+          />
+        ))
+      }
+    </div>
+  </div>
+</div>
