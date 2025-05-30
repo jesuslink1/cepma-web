@@ -1,15 +1,13 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
 
 /* Reset */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -63,6 +61,12 @@ body {
   transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+}
+
 /* Navbar */
 .nav-bar {
   display: flex;
@@ -110,7 +114,6 @@ body {
 }
 
 .nav-links {
-  display: flex;
   gap: 1rem;
   margin-left: auto;
   margin-right: 1rem;
@@ -169,7 +172,6 @@ body {
 }
 
 .nav-buttons {
-  display: flex;
   gap: 0.5rem;
 }
 
@@ -206,91 +208,6 @@ body {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* HERO */
-.hero {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4rem 2rem;
-  min-height: 480px;
-  background: linear-gradient(to right, #ffffff 0%, #e0f6f6 30%, #4fafb1 100%);
-  color: #1e7d7d;
-  flex-wrap: wrap;
-  gap: 2rem;
-  overflow: hidden;
-}
-
-.hero-text {
-  flex: 2.5;
-  z-index: 2;
-  position: relative;
-  margin-right: -4rem;
-  max-width: none;
-}
-
-.hero-text h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  background: linear-gradient(to right, #1e7d7d, #ffffff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1.1;
-}
-
-.hero-text h1 span {
-  display: block;
-  font-size: 2.4rem;
-  background: linear-gradient(to right, #4fafb1, #ffffff);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  color: #1e7d7d;
-}
-
-.hero-button {
-  background-color: #1e7d7d;
-  color: #ffffff;
-  padding: 0.7rem 1.4rem;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: #136d6d;
-}
-
-.hero-button svg {
-  width: 18px;
-  height: 18px;
-  fill: #ffffff;
-}
-
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-image img {
-  max-width: 100%;
-  border-radius: 32px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
@@ -394,11 +311,6 @@ body {
   }
 }
 
-/* ¿Qué Ofrecemos? */
-.ofrecemos {
-  padding: 3rem 2rem;
-  background-color: #f8ffff;
-}
 
 .titulo-subrayado {
   color: #17959e;
@@ -413,7 +325,7 @@ body {
 .titulo-subrayado::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 100%; /* ahora cubre todo el ancho del texto */
   height: 4px;
   background-color: #17959e;
   margin-top: 0.6rem;

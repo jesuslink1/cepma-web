@@ -2,24 +2,51 @@
 // No necesita props
 ---
 
-<div class="nav-bar">
-  <div class="left-section">
-    <img src="/favicon.png" alt="Logo del colegio" class="logo" />
-    <div class="brand-text">
-      <span class="line1"><strong>Instituto Figlie Maria Ausiliatrice</strong></span>
-      <span class="line2">Salesiane di Don Bosco</span>
-      <span class="line3 celeste">Inspectoría Santa Rosa de Lima - PER</span>
-      <span class="line4 celeste">Colegio Maria Auxiliadora - Chosica</span>
+<div class="nav-bar bg-white shadow-md p-3 flex items-center justify-between">
+  <!-- Sección izquierda -->
+  <div class="left-section flex items-center gap-3">
+    <!-- Logo -->
+    <img src="/images/logonuevofma.jpg" alt="Logo del colegio" class="logo w-12 h-12 md:w-16 md:h-16" />
+    <!-- Texto del colegio -->
+    <div class="brand-text hidden md:flex flex-col">
+      <span class="line1 font-bold text-sm md:text-base">Instituto Figlie Maria Ausiliatrice</span>
+      <span class="line2 text-xs md:text-sm">Salesiane di Don Bosco</span>
+      <span class="line3 text-xs md:text-sm celeste">Inspectoría Santa Rosa de Lima - PER</span>
+      <span class="line4 text-xs md:text-sm celeste">Colegio Maria Auxiliadora - Chosica</span>
     </div>
   </div>
-  <nav class="nav-links">
-    <a href="#">Nosotros</a><span class="separator"></span>
-    <a href="#">Propuesta educativa</a><span class="separator"></span>
-    <a href="#">Pastoral</a><span class="separator"></span>
-    <a href="#">Actividades extracurriculares</a>
+
+  <!-- Navegación principal -->
+  <nav class="nav-links hidden md:flex items-center gap-4">
+    <a href="#" class="text-gray-700 hover:text-gray-900 text-sm md:text-base">Nosotros</a>
+    <a href="#" class="text-gray-700 hover:text-gray-900 text-sm md:text-base">Propuesta educativa</a>
+    <a href="#" class="text-gray-700 hover:text-gray-900 text-sm md:text-base">Pastoral</a>
+    <a href="#" class="text-gray-700 hover:text-gray-900 text-sm md:text-base">Actividades extracurriculares</a>
   </nav>
-  <div class="nav-buttons">
-    <a href="#" class="btn-outline">Cubicol</a>
-    <a href="#" class="btn-filled">Admisión 2025</a>
+
+  <!-- Botones -->
+  <div class="nav-buttons hidden md:flex items-center gap-3">
+    <a href="#" class="btn-outline border border-gray-700 text-gray-700 px-4 py-2 rounded hover:bg-gray-700 hover:text-white text-sm font-semibold">Cubicol</a>
+    <a href="#" class="btn-filled bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 text-sm font-semibold">Admisión 2025</a>
+  </div>
+
+  <!-- Menú móvil: botón hamburguesa -->
+  <div class="mobile-menu flex md:hidden items-center">
+    <button id="hamburger" class="text-gray-700 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Menú desplegable móvil -->
+  <div id="mobile-nav" class="hidden flex flex-col bg-white shadow-md mt-2 p-3 space-y-2">
+
+    <a href="#" class="text-gray-700 hover:text-gray-900 text-sm font-medium">Nosotros</a>
+    <a href="#" class="text-gray-700 hover:text-gray-900 text-sm font-medium">Propuesta educativa</a>
+    <a href="#" class="text-gray-700 hover:text-gray-900 text-sm font-medium">Pastoral</a>
+    <a href="#" class="text-gray-700 hover:text-gray-900 text-sm font-medium">Actividades extracurriculares</a>
+    <a href="#" class="btn-outline border border-gray-700 text-gray-700 px-4 py-2 rounded hover:bg-gray-700 hover:text-white text-sm font-semibold">Cubicol</a>
+    <a href="#" class="btn-filled bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 text-sm font-semibold">Admisión 2025</a>
   </div>
 </div>

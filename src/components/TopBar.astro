@@ -2,17 +2,36 @@
 // No necesita props (estático)
 ---
 
-<div class="top-bar">
-  <div class="info-group">
-    <div class="info-item"><img src="/ubicacion.png" alt="Ubicación" /><span>Jr. Trujillo Sur N° 768 - Chosica</span></div>
-    <div class="info-item"><img src="/correo.png" alt="Correo" /><span>cepmachosica@cepma.edu.pe</span></div>
-    <div class="info-item"><img src="/telefono.png" alt="Teléfono" /><span>01-3601377</span></div>
-    <div class="info-item"><img src="/horario-atencion.png" alt="Horario" /><span>Atención: Lunes-Viernes 8:00 a.m - 3:00 p.m</span></div>
+<div class="top-bar bg-gray-100 text-gray-700 p-2 text-sm">
+  <!-- Info Group -->
+  <div class="info-group flex flex-col md:flex-row md:justify-between items-start md:items-center gap-3 md:gap-6">
+    <!-- Ubicación -->
+    <div class="info-item flex items-center gap-2">
+      <img src="/images/ubicacion.png" alt="Ubicación" class="w-4 h-4 md:w-5 md:h-5" />
+      <span class="text-xs md:text-sm">Jr. Trujillo Sur N° 768 - Chosica</span>
+    </div>
+    <!-- Correo -->
+    <div class="info-item flex items-center gap-2">
+      <img src="/images/correo.png" alt="Correo" class="w-4 h-4 md:w-5 md:h-5" />
+      <span class="text-xs md:text-sm">cepmachosica@cepma.edu.pe</span>
+    </div>
+    <!-- Teléfono -->
+    <div class="info-item flex items-center gap-2">
+      <img src="/images/telefono.png" alt="Teléfono" class="w-4 h-4 md:w-5 md:h-5" />
+      <span class="text-xs md:text-sm">01-3601377</span>
+    </div>
+    <!-- Horario -->
+    <div class="info-item flex items-center gap-2">
+      <img src="/images/horario-atencion.png" alt="Horario" class="w-4 h-4 md:w-5 md:h-5" />
+      <span class="text-xs md:text-sm">Atención: Lunes-Viernes 8:00 a.m - 3:00 p.m</span>
+    </div>
   </div>
-  <div class="socials">
-    <img src="/facebook.png" alt="Facebook" />
-    <img src="/whatsapp.png" alt="WhatsApp" />
-    <img src="/tiktok.png" alt="TikTok" />
-    <img src="/instagram.png" alt="Instagram" />
+
+  <!-- Social Media -->
+  <div class="socials flex justify-center md:justify-end gap-3 mt-3 md:mt-0">
+    <img src="/images/facebook.png" alt="Facebook" class="w-5 h-5 md:w-6 md:h-6" />
+    <img src="/images/whatsapp.png" alt="WhatsApp" class="w-5 h-5 md:w-6 md:h-6" />
+    <img src="/images/tiktok.png" alt="TikTok" class="w-5 h-5 md:w-6 md:h-6" />
+    <img src="/images/instagram.png" alt="Instagram" class="w-5 h-5 md:w-6 md:h-6" />
   </div>
 </div>
