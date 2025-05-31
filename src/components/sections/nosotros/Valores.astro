@@ -1,0 +1,54 @@
+---
+const valores = [
+  {
+    numero: 1,
+    titulo: 'Trascendencia',
+    texto: 'Vivir con sentido y profundidad, buscando siempre el bien común desde una perspectiva cristiana.'
+  },
+  {
+    numero: 2,
+    titulo: 'Sistema preventivo',
+    texto: 'Educar desde el amor, la razón y la religión, promoviendo la formación integral de cada estudiante.'
+  },
+  {
+    numero: 3,
+    titulo: 'Espíritu de familia',
+    texto: 'Crear un ambiente de confianza, respeto y alegría que fortalezca el sentido de pertenencia.'
+  },
+  {
+    numero: 4,
+    titulo: 'Presencia activa',
+    texto: 'Estar presentes con actitud de escucha y acompañamiento constante en el crecimiento de las estudiantes.'
+  },
+  {
+    numero: 5,
+    titulo: 'Acompañamiento',
+    texto: 'Caminar al lado de las estudiantes en sus procesos personales, académicos y espirituales.'
+  },
+  {
+    numero: 6,
+    titulo: 'Ecología integral',
+    texto: 'Fomentar el cuidado de la casa común desde una mirada ética, ecológica y solidaria.'
+  }
+];
+---
+
+<div class="max-w-6xl mx-auto mb-20">
+  <h2 class="titulo-subrayado mb-10">Nuestros valores</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-5">
+    {valores.map(({ numero, titulo, texto }) => (
+      <div class="flex items-center gap-4 p-4 rounded-xl transition duration-300 hover:shadow-xl hover:bg-gray-50 group cursor-pointer">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-[#38b2ac] text-white font-bold flex items-center justify-center text-lg transition group-hover:scale-110 group-hover:shadow-md">
+          {numero}
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-1 pt-1 transition group-hover:text-[#38b2ac]">{titulo}</h3>
+          <p class="text-gray-700 leading-relaxed">
+            {texto}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
